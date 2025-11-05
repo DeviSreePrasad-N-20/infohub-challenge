@@ -8,7 +8,7 @@ export default function WeatherModule() {
 
   useEffect(() => {
     setIsLoading(true);
-     axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/weather`)
+    axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/weather`)
 
       .then(res => {
         setData(res.data);
