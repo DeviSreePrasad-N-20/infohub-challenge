@@ -8,7 +8,8 @@ export default function QuoteGenerator() {
 
   const getQuote = () => {
     setIsLoading(true);
-    axios.get("/api/quote")
+  axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/quote`)
+
       .then(res => {
         setQuote(res.data.quote);
         setIsLoading(false);

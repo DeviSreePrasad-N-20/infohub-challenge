@@ -9,7 +9,8 @@ export default function CurrencyConverter() {
 
   const fetchConversion = () => {
     setIsLoading(true);
-    axios.get(`/api/currency?amount=${amount}`)
+   axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/currency?amount=...`)
+
       .then(res => {
         setData(res.data);
         setIsLoading(false);
